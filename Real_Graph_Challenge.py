@@ -1,27 +1,26 @@
-topBoarder = ["", "", "", "", "", ""]
-line1 = ["", 0, 0, 0, 0, ""]
-line2 = ["", 0, 0, 0, 0, ""]
-line3 = ["", 0, 0, 0, 0, ""]
-line4 = ["", 0, 0, 0, 0, ""]
-bottomBoarder = ["", "", "", "", "", ""]
-lineList = [topBoarder, line1, line2, line3, line4, bottomBoarder]
-
-def display_graph():
-    stringPrintList = ""
-    for current in range (6):
-        for cCurrent in range (6) :
-            if lineList[int(current) - 1][int(cCurrent) - 1] != "":
-                stringPrintList += (str(lineList[int(current) - 1][int(cCurrent) - 1])) + "  "
-        stringPrintList += "\n"
-    print(stringPrintList)
-
-#make the program print the lineList without the boarders using the for loop.
-insQ = ""
-isConnected = True
-#print(f"{line1} \n{line2} \n{line3} \n{line4}\n\n")
-display_graph()
-print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
 while True:
+    topBoarder = ["", "", "", "", "", ""]
+    line1 = ["", 0, 0, 0, 0, ""]
+    line2 = ["", 0, 0, 0, 0, ""]
+    line3 = ["", 0, 0, 0, 0, ""]
+    line4 = ["", 0, 0, 0, 0, ""]
+    bottomBoarder = ["", "", "", "", "", ""]
+    lineList = [topBoarder, line1, line2, line3, line4, bottomBoarder]
+
+    isConnected = True
+
+    def display_graph():
+        stringPrintList = ""
+        for current in range(6):
+            for cCurrent in range(6):
+                if lineList[int(current) - 1][int(cCurrent) - 1] != "":
+                    stringPrintList += (str(lineList[int(current) - 1][int(cCurrent) - 1])) + "  "
+            stringPrintList += "\n"
+        print(stringPrintList)
+
+    display_graph()
+
+    print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
     while True:
         insQ = input("Where would you like to insert marks?:\n")
 
@@ -91,7 +90,7 @@ while True:
             #print("These points are not connected because they aren't the same value.")
 
 
-#__________________________________________________PREV_CON_QUESTION_CHECKS____________________________________________#
+#________________________________________________PREV_CON_QUESTION_CHECKS______________________________________________#
           #downRight check
         if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != (lineList[int(prevConQuestion[1]) + 1][int(
           prevConQuestion[0]) + 1]):
