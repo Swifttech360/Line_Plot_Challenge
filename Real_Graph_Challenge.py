@@ -20,7 +20,7 @@ insQ = ""
 isConnected = True
 #print(f"{line1} \n{line2} \n{line3} \n{line4}\n\n")
 display_graph()
-print('Enter two numbers (1 - 4) seperated by a space to add a point to the graph (i.e,"x y")')
+print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
 while True:
     while True:
         insQ = input("Where would you like to insert marks?:\n")
