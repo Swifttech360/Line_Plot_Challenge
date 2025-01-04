@@ -6,7 +6,7 @@ while True:
     line4 = ["", 0, 0, 0, 0, ""]
     bottomBoarder = ["", "", "", "", "", ""]
     lineList = [topBoarder, line1, line2, line3, line4, bottomBoarder]
-
+    coordCheckList = []
     isConnected = True
 
     def display_graph():
@@ -78,16 +78,14 @@ while True:
             continue
         loopNum += 1
         display_graph()
+        coordCheckList.extend((prevConQuestion[0], prevConQuestion[1], conQuestion[0], conQuestion[1]))
+        cLoopNum = 1
+        for (i, coord) in enumerate(coordCheckList):
+            if coord[]
 
 
 
 
-        #if lineList[int(conQuestion[1]) - 1][int(conQuestion[0]) - 1] != lineList[int(prevConQuestion[1]) - 1][int(
-        #prevConQuestion[0]) - 1]:
-        #isConnected = False
-
-
-            #print("These points are not connected because they aren't the same value.")
 
 
 #________________________________________________PREV_CON_QUESTION_CHECKS______________________________________________#
@@ -144,7 +142,10 @@ while True:
                         + 1][int(conQuestion[0])]:
                         isConnected = False
                         print("These points are not connected because no points of the same value touch conQuestion")
-
+    
+    
+    
+    
 
         if isConnected:
             print("True so far")
