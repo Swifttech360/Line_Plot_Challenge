@@ -1,8 +1,6 @@
-[a, b, c, letterList] = [1, 2, 3, []]
-letterList.extend((a, b, c))
-a += 2
-b += .5
-c -= 1
+a = [1, 2, 3]
+b = [4, 5, 6]
+letterlist = []
 
-letterList.extend([a, b, c])
-print(letterList)
+letterlist.extend([a, b])
+print(letterlist)
