@@ -82,9 +82,6 @@ while True:
 
 
 
-        #if lineList[int(conQuestion[1]) - 1][int(conQuestion[0]) - 1] != lineList[int(prevConQuestion[1]) - 1][int(
-        #prevConQuestion[0]) - 1]:
-        #isConnected = False
 
        
 
