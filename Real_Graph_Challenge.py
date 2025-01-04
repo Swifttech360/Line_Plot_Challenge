@@ -182,9 +182,8 @@ while True:
 
 
  
-
-#jhvouhf[hwfhiweh[wh[whf[ierufnsejfejonfo
-#enfjenfienfejnfewo
+#downRight check
+#jhvouhf[hwfhiweh[wh[whf[i
 
 
 
