@@ -86,8 +86,7 @@ while True:
         #prevConQuestion[0]) - 1]:
         #isConnected = False
 
-
-            #print("These points are not connected because they aren't the same value.")
+       
 
 
 #________________________________________________PREV_CON_QUESTION_CHECKS______________________________________________#
