@@ -78,9 +78,10 @@ while True:
             continue
         loopNum += 1
         display_graph()
-        coordCheckList.extend((prevConQuestion, conQuestion))
-        for (i, current) in enumerate(coordCheckList):
-            if prevConQuestion[0] == current
+        coordCheckList.extend((prevConQuestion[0], prevConQuestion[1], conQuestion[0], conQuestion[1]))
+        cLoopNum = 1
+        for (i, coord) in enumerate(coordCheckList):
+            if coord[]
 
 
 
