@@ -67,6 +67,9 @@
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -107,6 +110,9 @@
       <list>
         <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.appendTest" />
+        <item itemvalue="Python.Real_Graph_Challenge" />
+        <item itemvalue="Python.appendTest" />
+        <item itemvalue="Python.Real_Graph_Challenge" />
       </list>
     </recent_temporary>
   </component>
