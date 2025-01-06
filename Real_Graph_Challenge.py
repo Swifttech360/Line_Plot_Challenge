@@ -1,3 +1,12 @@
+BackEnd_TopBoarder = ("", "", "", "", "", "")
+BackEnd_Line1 = ("", 1, 2, 3, 4, "")
+BackEnd_Line2 = ("", 5, 6, 7, 8, "")
+BackEnd_Line3 = ("", 9, 10, 11, 12, "")
+BackEnd_Line4 = ("", 13, 14, 15, 16, "")
+BackEnd_BottomBoarder = ("", "", "", "", "", "")
+backEndLineList = (BackEnd_TopBoarder, BackEnd_Line1, BackEnd_Line2, BackEnd_Line3, BackEnd_Line4,
+                   BackEnd_BottomBoarder)
+
 while True:
     topBoarder = ["", "", "", "", "", ""]
     line1 = ["", 0, 0, 0, 0, ""]
@@ -65,6 +74,7 @@ while True:
             prevConQuestion = ''
             continue
         loopNum += 1
+        coordCheckList.extend(prevConQuestion)
 
     while True:
 
@@ -77,12 +87,32 @@ while True:
         except ValueError:
             print("Those aren't two points, dummy")
             continue
-        #loopNum += 1
-        #display_graph()
-        #coordCheckList.extend((prevConQuestion[0], prevConQuestion[1], conQuestion[0], conQuestion[1]))
-        #cLoopNum = 1
-        #for (i, coord) in enumerate(coordCheckList):
-         #   if coord[]
+        loopNum += 1
+        coordCheckList.extend(conQuestion)
+        display_graph()
+
+        for (i, coord) in enumerate(coordCheckList):
+
+            #downRight Check
+            if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
+                    coord[1])][int(coord[0])]:
+              #right check
+              if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
+                  [int(coord[1])][int(coord[0])]:
+                #upRight Check
+                if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0]) + 1] != backEndLineList\
+                    [int(coord[1])][int(coord[0])]:
+                  #Up Check
+                  if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
+                    [int(coord[1])][int(coord[0])]:
+                    print('160 degree connection test failed')
+            else:print('yipeee')
+
+
+
+
+
+
 
 
 
@@ -150,9 +180,9 @@ while True:
             print("These points are not connected because they are not the same value")
             isConnected = False
 
-        # print("These points are not connected because they aren't the same value.")
-    
-    
+
+
+
 
         if isConnected:
             print("True so far")
@@ -169,7 +199,7 @@ while True:
             loopNum -= 1
             continue
         loopNum += 1
-
+        coordCheckList.extend(prevConQuestion)
     if isConnected:
         print("True")
     else:
@@ -188,10 +218,16 @@ while True:
 #bottomBoarder = ["", "", "", "", "", ""]
 
 
- 
+
 #downRight check
 #jhvouhf[hwfhiweh[wh[whf[ifghjkl;
 
 
 
 
+#topBoarder = ["", "", "", "", "", ""]
+#line1 = ["", 1, 2, 3, 4, ""]
+#line2 = ["", 5, 6, 7, 8, ""]
+#line3 = ["", 9, 10, 11, 12, ""]
+#line4 = ["", 13, 14, 15, 16, ""]
+#bottomBoarder = ["", "", "", "", "", ""]
