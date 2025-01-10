@@ -6,7 +6,9 @@ BackEnd_Line4 = ("", 13, 14, 15, 16, "")
 BackEnd_BottomBoarder = ("", "", "", "", "", "")
 backEndLineList = (BackEnd_TopBoarder, BackEnd_Line1, BackEnd_Line2, BackEnd_Line3, BackEnd_Line4,
                    BackEnd_BottomBoarder)
-
+def devmode():
+    print(f"{BackEnd_Line1}\n{BackEnd_Line2}\n {BackEnd_Line3}\n {BackEnd_Line4}")
+    exit()
 while True:
     topBoarder = ["", "", "", "", "", ""]
     line1 = ["", 0, 0, 0, 0, ""]
@@ -32,6 +34,9 @@ while True:
     print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
     while True:
         insQ = input("Where would you like to insert marks?:\n")
+        if insQ in ("exit", "devmode"):
+            devmode()
+
 
         #print(selection)
         if insQ in ("break", "next"):
