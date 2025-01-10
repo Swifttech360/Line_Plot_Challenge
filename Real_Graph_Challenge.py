@@ -74,7 +74,7 @@ while True:
             prevConQuestion = ''
             continue
         loopNum += 1
-        coordCheckList.extend(prevConQuestion)
+        coordCheckList.append(prevConQuestion)
 
     while True:
 
@@ -88,9 +88,10 @@ while True:
             print("Those aren't two points, dummy")
             continue
         loopNum += 1
-        coordCheckList.extend(conQuestion)
+        coordCheckList.append(conQuestion)
         display_graph()
-
+        # for some reason, the loop below will always return false, saying that the currend coord does not equal
+        # itself
         for (i, coord) in enumerate(coordCheckList):
 
             #downRight Check
@@ -106,8 +107,12 @@ while True:
                   if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
                     [int(coord[1])][int(coord[0])]:
                     print('160 degree connection test failed')
+                    print(f"{backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])]} != "
+                          f"{backEndLineList[int(coord[1])][int(coord[0])]} ")
+                    break
             else:print('yipeee')
-
+        # for some reason, the loop below will always return false, saying that the currend coord does not equal
+        # itself
 
 
 
@@ -199,7 +204,7 @@ while True:
             loopNum -= 1
             continue
         loopNum += 1
-        coordCheckList.extend(prevConQuestion)
+        coordCheckList.append(prevConQuestion)
     if isConnected:
         print("True")
     else:
