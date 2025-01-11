@@ -101,27 +101,28 @@ while True:
         # itself
         for (i, coord) in enumerate(coordCheckList):
 
-             if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != backEndLineList[int(
-                    coord[1])][int(coord[0])]:
+             #if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != backEndLineList[int(
+                   # coord[1])][int(coord[0])]:
+         if coord not in pre
              #downRight Check
-              if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
-                    coord[1])][int(coord[0])]:
+              #if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
+                    #coord[1])][int(coord[0])]:
                #right check
-               if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
-                  [int(coord[1])][int(coord[0])]:
+               #if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
+                 # [int(coord[1])][int(coord[0])]:
                 #upRight Check
-                if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0]) + 1] != backEndLineList\
-                    [int(coord[1])][int(coord[0])]:
+                #if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0]) + 1] != backEndLineList\
+                    #[int(coord[1])][int(coord[0])]:
                   #Up Check
-                  if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
-                    [int(coord[1])][int(coord[0])]:
-                    print(f"{coord} isn't sonnected to {prevConQuestion}")
-                    backEndConnected = False
+                  #if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
+                    #[int(coord[1])][int(coord[0])]:
+                    #print(f"{coord} isn't sonnected to {prevConQuestion}")
+                   # backEndConnected = False
 
 
-             else: pass
-        if backEndConnected:
-            print('yipeee')
+            # else: pass
+        #if backEndConnected:
+           # print('yipeee')
 
 
         else:

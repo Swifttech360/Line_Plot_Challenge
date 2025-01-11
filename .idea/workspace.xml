@@ -7,6 +7,7 @@
     <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Added devmode">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Real_Graph_Challenge.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/appendTest.py" beforeDir="false" afterPath="$PROJECT_DIR$/appendTest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,7 +24,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="idk_man" />
+        <entry key="$PROJECT_DIR$" value="No_Backend_Branch" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -69,7 +70,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.Real_Graph_Challenge">
+  <component name="RunManager" selected="Python.appendTest">
     <configuration name="Real_Graph_Challenge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
@@ -116,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.appendTest" />
+        <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.appendTest" />
         <item itemvalue="Python.Real_Graph_Challenge" />
