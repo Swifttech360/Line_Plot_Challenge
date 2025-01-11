@@ -19,6 +19,8 @@ while True:
     lineList = [topBoarder, line1, line2, line3, line4, bottomBoarder]
     coordCheckList = []
     isConnected = True
+    backEndConnected = False
+
 
     def display_graph():
         stringPrintList = ""
@@ -95,15 +97,17 @@ while True:
         loopNum += 1
         coordCheckList.append(conQuestion)
         display_graph()
-        # for some reason, the loop below will always return false, saying that the currend coord does not equal
+        # for some reason, the loop below will always return false, saying that the current coord does not equal
         # itself
         for (i, coord) in enumerate(coordCheckList):
 
-            #downRight Check
-            if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
+             if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != backEndLineList[int(
                     coord[1])][int(coord[0])]:
-              #right check
-              if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
+             #downRight Check
+              if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
+                    coord[1])][int(coord[0])]:
+               #right check
+               if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
                   [int(coord[1])][int(coord[0])]:
                 #upRight Check
                 if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0]) + 1] != backEndLineList\
@@ -111,11 +115,20 @@ while True:
                   #Up Check
                   if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
                     [int(coord[1])][int(coord[0])]:
-                    print('160 degree connection test failed')
-                    print(f"{backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])]} != "
-                          f"{backEndLineList[int(coord[1])][int(coord[0])]} ")
-                    break
-            else:print('yipeee')
+                    print(f"{coord} isn't sonnected to {prevConQuestion}")
+                    backEndConnected = False
+
+
+             else: pass
+        if backEndConnected:
+            print('yipeee')
+
+
+        else:
+            print('160 degree connection test failed')
+
+
+
         # for some reason, the loop below will always return false, saying that the currend coord does not equal
         # itself
 
@@ -241,3 +254,5 @@ while True:
 #line3 = ["", 9, 10, 11, 12, ""]
 #line4 = ["", 13, 14, 15, 16, ""]
 #bottomBoarder = ["", "", "", "", "", ""]
+
+    #IDLE Test
