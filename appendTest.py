@@ -1,8 +1,17 @@
 
-a = [1, 2, 3]
+a = [1, 2, 3, "", ""]
+z = [1, 2, 3]
 b = [4, 5, 6]
 c = [a, b]
-for i, d in enumerate (c):
-    print (i)
-    if d not in [1, 2, 3]: print('no')
-    else: print("yes")
+
+for loopnumm, current in enumerate (c):
+    if z == current:
+        print("yes")
+    else: print("nawww niggaaah")
+    print(current)
+
+print("Part two")
+if 1 in a:
+    print("1 IS in a")
+print(type(a[0]))
+print(type(a[3]))

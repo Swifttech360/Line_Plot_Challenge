@@ -70,7 +70,7 @@
     ]
   }
 }</component>
-  <component name="RunManager" selected="Python.appendTest">
+  <component name="RunManager" selected="Python.Real_Graph_Challenge">
     <configuration name="Real_Graph_Challenge" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
@@ -117,8 +117,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.appendTest" />
         <item itemvalue="Python.Real_Graph_Challenge" />
+        <item itemvalue="Python.appendTest" />
         <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.appendTest" />
         <item itemvalue="Python.Real_Graph_Challenge" />

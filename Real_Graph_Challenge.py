@@ -81,7 +81,8 @@ while True:
             prevConQuestion = ''
             continue
         loopNum += 1
-        coordCheckList.append(prevConQuestion)
+        coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        print(coordCheckList)
 
     while True:
 
@@ -95,29 +96,16 @@ while True:
             print("Those aren't two points, dummy")
             continue
         loopNum += 1
-        coordCheckList.append(conQuestion)
+        coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
         display_graph()
+        print(coordCheckList)
         # for some reason, the loop below will always return false, saying that the current coord does not equal
         # itself
-        for (i, coord) in enumerate(coordCheckList):
+        #for (i, coord) in enumerate(coordCheckList):
 
-             #if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != backEndLineList[int(
-                   # coord[1])][int(coord[0])]:
-         if coord not in pre
-             #downRight Check
-              #if backEndLineList[int(prevConQuestion[1]) + 1][int(prevConQuestion[0]) + 1] != backEndLineList[int(
-                    #coord[1])][int(coord[0])]:
-               #right check
-               #if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0]) + 1] != backEndLineList\
-                 # [int(coord[1])][int(coord[0])]:
-                #upRight Check
-                #if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0]) + 1] != backEndLineList\
-                    #[int(coord[1])][int(coord[0])]:
-                  #Up Check
-                  #if backEndLineList[int(prevConQuestion[1]) - 1][int(prevConQuestion[0])] !=backEndLineList\
-                    #[int(coord[1])][int(coord[0])]:
-                    #print(f"{coord} isn't sonnected to {prevConQuestion}")
-                   # backEndConnected = False
+         #     print(backEndLineList[int(coord[1])][int(coord[0])])
+#backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] !=
+
 
 
             # else: pass
@@ -125,8 +113,8 @@ while True:
            # print('yipeee')
 
 
-        else:
-            print('160 degree connection test failed')
+        #else:
+         #   print('160 degree connection test failed')
 
 
 
@@ -223,7 +211,7 @@ while True:
             loopNum -= 1
             continue
         loopNum += 1
-        coordCheckList.append(prevConQuestion)
+        coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
     if isConnected:
         print("True")
     else:
