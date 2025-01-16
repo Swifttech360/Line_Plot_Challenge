@@ -15,3 +15,7 @@ if 1 in a:
     print("1 IS in a")
 print(type(a[0]))
 print(type(a[3]))
+
+x = 7.25
+if 5 < x < 10:
+    print("x is gud")

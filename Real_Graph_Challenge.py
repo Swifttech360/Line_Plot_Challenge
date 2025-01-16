@@ -96,9 +96,32 @@ while True:
             print("Those aren't two points, dummy")
             continue
         loopNum += 1
+
         coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
         display_graph()
         print(coordCheckList)
+        linecheck1 = False
+        linecheck2 = False
+        for i, current in enumerate (coordCheckList):
+            x = int(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+         #self check
+            if x != conQuestion:
+                 #right check
+             if (x + 1) not in coordCheckList and x not in (4, 8, 12, 16):
+                 #upRight check
+              if (x - 3) not in coordCheckList and x not in (1,2,3,4,8,12,16):
+               #Up Check
+               if (x - 4) not in coordCheckList and x > 4:
+                #upLeft Check
+                if (x - 5) not in coordCheckList and x not in (1, 2, 3, 4, 5, 9, 13):
+                 print("Checks would continue")
+            else: print("checks would not continue")
+
+
+
+
+            #if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != current:
+
         # for some reason, the loop below will always return false, saying that the current coord does not equal
         # itself
         #for (i, coord) in enumerate(coordCheckList):
@@ -135,57 +158,63 @@ while True:
           #downRight check
         # noinspection PyUnboundLocalVariable
         if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != (lineList[int(prevConQuestion[1]) + 1][int(
-          prevConQuestion[0]) + 1]):
+           prevConQuestion[0]) + 1]):
             #right Check
           if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])][
-            int(prevConQuestion[0]) + 1]:
+             int(prevConQuestion[0]) + 1]:
               #upRight Check
             if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1]) - 1][
-              int(prevConQuestion[0]) + 1]:
+               int(prevConQuestion[0]) + 1]:
                 #Up Check
               if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])- 1]\
                 [int(prevConQuestion[0])]:
                   #upLeft Check
                 if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1]) - 1]\
-                  [int(prevConQuestion[0]) - 1]:
+                   [int(prevConQuestion[0]) - 1]:
                     #Left Check
                   if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])][
-                    int(prevConQuestion[0]) - 1]:
+                     int(prevConQuestion[0]) - 1]:
                       #downLeft Check
                     if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])
-                      + 1][int(prevConQuestion[0]) - 1]:
+                       + 1][int(prevConQuestion[0]) - 1]:
                         #Down Check
                       if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])\
-                        + 1][int(prevConQuestion[0])]:
-                        isConnected = False
-                        print("These points are not connected because no points of the same value touch prevConQuestion")
+                         + 1][int(prevConQuestion[0])]:
+                          #self check
+                        if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(conQuestion[1]
+                           )][int(conQuestion[0])]:
+                         isConnected = False
+                         print("These points are not connected because no points of the same value touch "
+                               "prevConQuestion")
 #___________________________________________________CON_QUESTION_CHECKS________________________________________________#
          #downRight check
         if lineList[int(conQuestion[1])][int(conQuestion[0])] != (lineList[int(conQuestion[1]) + 1][int(
-          conQuestion[0]) + 1]):
+           conQuestion[0]) + 1]):
             #right Check
           if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])][
-            int(conQuestion[0]) + 1]:
+             int(conQuestion[0]) + 1]:
               #upRight Check
             if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1]) - 1][
-              int(conQuestion[0]) + 1]:
+               int(conQuestion[0]) + 1]:
                 #Up Check
               if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])- 1]\
-                [int(conQuestion[0])]:
+                 [int(conQuestion[0])]:
                   #upLeft Check
                 if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1]) - 1]\
-                  [int(conQuestion[0]) - 1]:
+                   [int(conQuestion[0]) - 1]:
                     #Left Check
                   if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])][
-                    int(conQuestion[0]) - 1]:
+                     int(conQuestion[0]) - 1]:
                       #downLeft Check
                     if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])
-                      + 1][int(conQuestion[0]) - 1]:
+                       + 1][int(conQuestion[0]) - 1]:
                         #Down Check
                       if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])\
-                        + 1][int(conQuestion[0])]:
-                        isConnected = False
-                        print("These points are not connected because no points of the same value touch conQuestion")
+                          + 1][int(conQuestion[0])]:
+                        if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(prevConQuestion[1])][int
+                            (prevConQuestion[0])]:
+                         isConnected = False
+                         print("These points are not connected because no points of the same value touch conQuestion")
 
         if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(prevConQuestion[1])][int(
         prevConQuestion[0])]:
