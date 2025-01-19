@@ -145,7 +145,8 @@ while True:
             isConnected = False
         else: print("prevConCheck Passed!")
         prevDupicate = False
-
+                   #Idea: implement a checknum variable that counts how many times not one flag returned false.
+    # If the number if times that happens is the same as coordCheckList's length, isconnected gets set to false
 #________________________________________________ConQuestion Back End Test_____________________________________________
         for i, current in enumerate (coordCheckList):
             x = int(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
