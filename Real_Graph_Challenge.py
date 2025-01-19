@@ -1,3 +1,5 @@
+
+
 BackEnd_TopBoarder = ("", "", "", "", "", "")
 BackEnd_Line1 = ("", 1, 2, 3, 4, "")
 BackEnd_Line2 = ("", 5, 6, 7, 8, "")
@@ -20,7 +22,8 @@ while True:
     coordCheckList = []
     isConnected = True
     backEndConnected = False
-
+    #possibly Junk Code Above
+    [prevDupicate, conDuplicate] = [False, False]
 
     def display_graph():
         stringPrintList = ""
@@ -81,7 +84,10 @@ while True:
             prevConQuestion = ''
             continue
         loopNum += 1
-        coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] not in coordCheckList:
+            coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        else:
+            prevDupicate = True
         print(coordCheckList)
 
     while True:
@@ -97,25 +103,87 @@ while True:
             continue
         loopNum += 1
 
-        coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
+        if backEndLineList[int(conQuestion[1])][int(conQuestion[0])] not in coordCheckList:
+            coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
+        else:
+            conDupicate = True
+        #coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
         display_graph()
         print(coordCheckList)
-        linecheck1 = False
-        linecheck2 = False
+        lineCheck1 = False
+        lineCheck2 = False
+
+        # ____________________________________________prevConQuestion Back End Test_____________________________________
         for i, current in enumerate (coordCheckList):
             x = int(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
-         #self check
-            if x != conQuestion:
-                 #right check
+            #Duplicate Check
+            if (prevDupicate == False) or (x != backEndLineList[int(conQuestion[1])][int(conQuestion[0])]):
+             #right check
              if (x + 1) not in coordCheckList and x not in (4, 8, 12, 16):
-                 #upRight check
+              #upRight check
               if (x - 3) not in coordCheckList and x not in (1,2,3,4,8,12,16):
                #Up Check
                if (x - 4) not in coordCheckList and x > 4:
                 #upLeft Check
                 if (x - 5) not in coordCheckList and x not in (1, 2, 3, 4, 5, 9, 13):
-                 print("Checks would continue")
-            else: print("checks would not continue")
+                 #Left Check
+                 if (x - 1) not in coordCheckList and x not in (1, 5, 9, 13):
+                  #downLeft Check
+                  if (x + 3) not in coordCheckList and x not in (1, 5, 9, 13, 14, 15, 16):
+                    #Down Check
+                   if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
+                    #downRight Check
+                    if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
+                     pass
+            else:
+                print('setting lineCheck1 to True')
+                lineCheck1 = True
+                break
+        if not lineCheck1:
+            print(f"This line is broken because prevConQuestion check #{loopNum - 1} isn't next to any points you've "
+                  f"checked in the past")
+            isConnected = False
+        else: print("prevConCheck Passed!")
+        prevDupicate = False
+
+#________________________________________________ConQuestion Back End Test_____________________________________________
+        for i, current in enumerate (coordCheckList):
+            x = int(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
+            #Self check
+            if conDuplicate == False:
+             #right check
+             if (x + 1) not in coordCheckList and x not in (4, 8, 12, 16):
+              #upRight check
+              if (x - 3) not in coordCheckList and x not in (1,2,3,4,8,12,16):
+               #Up Check
+               if (x - 4) not in coordCheckList and x > 4:
+                #upLeft Check
+                if (x - 5) not in coordCheckList and x not in (1, 2, 3, 4, 5, 9, 13):
+                 #Left Check
+                 if (x - 1) not in coordCheckList and x not in (1, 5, 9, 13):
+                  #downLeft Check
+                  if (x + 3) not in coordCheckList and x not in (1, 5, 9, 13, 14, 15, 16):
+                    #Down Check
+                   if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
+                    #downRight Check
+                    if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
+                     pass
+            else:
+                lineCheck2 = True
+                break
+        if not lineCheck2:
+            print(f"This line is broken because conQuestion check #{loopNum} isn't next to any points you've "
+                  f"checked in the past")
+            isConnected = False
+        else: print("ConQuestion Check Passed!")
+        conDuplicate = False
+
+
+
+
+
+                 #print("Checks would continue")
+            #else: print("checks would not continue")
 
 
 
@@ -240,7 +308,13 @@ while True:
             loopNum -= 1
             continue
         loopNum += 1
-        coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] not in coordCheckList:
+            coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        else:
+            prevDupicate = True
+
+
+
     if isConnected:
         print("True")
     else:
