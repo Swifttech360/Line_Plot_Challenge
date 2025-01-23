@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Real_Graph_Challenge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,12 +34,12 @@
     &quot;assignee&quot;: &quot;Swifttech360&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Swifttech360/Git_GraphChallenge.git&quot;,
-    &quot;accountId&quot;: &quot;9195a5bd-94db-4107-8c15-6abed78117bb&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Swifttech360/Git_GraphChallenge.git",
+    "accountId": "744daf0f-d5ee-4b4f-8660-384f778fe87f"
   }
-}</component>
+}]]></component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Real_Graph_Challenge.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/appendTest.py" root0="SKIP_INSPECTION" />
@@ -51,27 +52,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.All_Purpose_Playground.executor": "Run",
-    "Python.Real_Graph_Challenge.executor": "Run",
-    "Python.appendTest.executor": "Run",
-    "Python.myinfo.executor": "Run",
-    "Python.scratch.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/(A) IVY TECH WORK/SDEV140/MilesButlerM#_M#Ex#",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.All_Purpose_Playground.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Real_Graph_Challenge.executor&quot;: &quot;Run&quot;,
+    &quot;Python.appendTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.myinfo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/(A) IVY TECH WORK/SDEV140/MilesButlerM#_M#Ex#&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
-  <component name="RunManager" selected="Python.All_Purpose_Playground">
+}</component>
+  <component name="RunManager" selected="Python.Real_Graph_Challenge">
     <configuration name="All_Purpose_Playground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
@@ -184,8 +185,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.All_Purpose_Playground" />
         <item itemvalue="Python.Real_Graph_Challenge" />
+        <item itemvalue="Python.All_Purpose_Playground" />
         <item itemvalue="Python.myinfo" />
         <item itemvalue="Python.scratch" />
         <item itemvalue="Python.appendTest" />
@@ -195,7 +196,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
+        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
       </set>
     </attachedChunks>
   </component>
