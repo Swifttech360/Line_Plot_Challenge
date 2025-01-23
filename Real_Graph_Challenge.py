@@ -12,7 +12,7 @@ def devmode():
     print(f"{BackEnd_Line1}\n{BackEnd_Line2}\n {BackEnd_Line3}\n {BackEnd_Line4}")
     exit()
 while True:
-    checkCondition = 0
+    checkCondition = True
     topBoarder = ["", "", "", "", "", ""]
     line1 = ["", 0, 0, 0, 0, ""]
     line2 = ["", 0, 0, 0, 0, ""]
@@ -138,7 +138,7 @@ while True:
                    if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
                     #downRight Check
                     if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
-                     checkCondition += 1
+                     checkCondition = False
 
 
             else:
@@ -146,13 +146,13 @@ while True:
                 break
             print('Prev Check Condition =', checkCondition)
 
-        if checkCondition == len(coordCheckList):
+        if checkCondition == False:
             print(f"This line is broken because prevConQuestion check #{loopNum - 2} isn't next to any points you've "
                   f"checked in the past")
             isConnected = False
         else: print("prevConCheck Passed!")
         prevDupicate = False
-        checkCondition = 0
+        checkCondition = True
                    #Idea: implement a checknum variable that counts how many times not one flag returned false.
     # If the number if times that happens is the same as coordCheckList's length, isconnected gets set to false
 #________________________________________________ConQuestion Back End Test_____________________________________________
@@ -176,16 +176,18 @@ while True:
                    if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
                     #downRight Check
                     if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
-                     checkCondition += 1
+                     checkCondition == False
+
             else:
                 break
             print('Check Condition 2 =', checkCondition)
-        if len(coordCheckList) == checkCondition:
+        if checkCondition == False:
             print(f"This line is broken because conQuestion check #{loopNum - 1} isn't next to any points you've "
                   f"checked in the past")
             isConnected = False
         else: print("Back End ConQuestion Check Passed!")
         conDuplicate = False
+        checkCondition = True
 
 
 
