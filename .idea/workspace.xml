@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Real_Graph_Challenge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -36,7 +38,7 @@
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
     "url": "https://github.com/Swifttech360/Git_GraphChallenge.git",
-    "accountId": "744daf0f-d5ee-4b4f-8660-384f778fe87f"
+    "accountId": "9195a5bd-94db-4107-8c15-6abed78117bb"
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
@@ -195,7 +197,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-495700d161d3-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.22562.220" />
+        <option value="bundled-python-sdk-fb887030ada0-aa17d162503b-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-243.21565.199" />
       </set>
     </attachedChunks>
   </component>

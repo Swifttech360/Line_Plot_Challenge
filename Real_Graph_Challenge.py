@@ -45,7 +45,7 @@ while True:
 
 
         #print(selection)
-        if insQ in ("break", "next"):
+        if insQ in ("break", "next", ""):
             break
         selection = insQ.split()
         try:
@@ -91,6 +91,7 @@ while True:
             coordCheckList.append(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
         else:
             prevDupicate = True
+            print('prevDupicate = True')
         print(coordCheckList)
 
     while True:
@@ -118,33 +119,41 @@ while True:
         lineCheck2 = False
 
         # ____________________________________________prevConQuestion Back End Test_____________________________________
-        for i, current in enumerate (coordCheckList):
-            x = int(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
-            #Duplicate Check
-            if (prevDupicate == False) or (x != backEndLineList[int(conQuestion[1])][int(conQuestion[0])]):
-             #right check
-             if (x + 1) not in coordCheckList and x not in (4, 8, 12, 16):
-              #upRight check
-              if (x - 3) not in coordCheckList and x not in (1,2,3,4,8,12,16):
-               #Up Check
-               if (x - 4) not in coordCheckList and x > 4:
-                #upLeft Check
-                if (x - 5) not in coordCheckList and x not in (1, 2, 3, 4, 5, 9, 13):
-                 #Left Check
-                 if (x - 1) not in coordCheckList and x not in (1, 5, 9, 13):
-                  #downLeft Check
-                  if (x + 3) not in coordCheckList and x not in (1, 5, 9, 13, 14, 15, 16):
-                    #Down Check
-                   if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
-                    #downRight Check
-                    if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
-                     checkCondition = False
+        #for i, current in enumerate (coordCheckList):
+        x = int(backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])])
+        #Duplicate Check
+        if (prevDupicate == False):
+            #or (x != backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
+         #right check
+         if (x + 1) not in coordCheckList or x in (4, 8, 12, 16):
+          #upRight check
+          if (x - 3) not in coordCheckList or x in (1,2,3,4,8,12,16):
+           #Up Check
+           if (x - 4) not in coordCheckList or x <= 4:
+            #upLeft Check
+            if (x - 5) not in coordCheckList or x in (1, 2, 3, 4, 5, 9, 13):
+             #Left Check
+             if (x - 1) not in coordCheckList or x in (1, 5, 9, 13):
+              #downLeft Check
+              if (x + 3) not in coordCheckList or x in (1, 5, 9, 13, 14, 15, 16):
+                #Down Check
+               if (x + 4) not in coordCheckList or x in (13, 14, 15, 16):
+                #downRight Check
+                if (x + 5) not in coordCheckList or x  in (4, 8, 12, 13, 14, 15, 16):
+                 checkCondition = False
+                else: print("prevCon9")
+               else: print("prevCon8")
+              else: print("prevCon7")
+             else: print("prevCon6")
+            else: print("prevCon5")
+           else: print("prevCon4")
+          else: print("prevCon3")
+         else: print("prevCon2")
+        else: print("prevCon1")
 
 
-            else:
-                print('Backend PrevConQuestion Check Passed!')
-                break
-            print('Prev Check Condition =', checkCondition)
+          
+            #print('Prev Check Condition =', checkCondition)
 
         if checkCondition == False:
             print(f"This line is broken because prevConQuestion check #{loopNum - 2} isn't next to any points you've "
@@ -156,31 +165,38 @@ while True:
                    #Idea: implement a checknum variable that counts how many times not one flag returned false.
     # If the number if times that happens is the same as coordCheckList's length, isconnected gets set to false
 #________________________________________________ConQuestion Back End Test_____________________________________________
-        for i, current in enumerate (coordCheckList):
-            x = int(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
-            #Self check
-            if conDuplicate == False:
-             #right check
-             if (x + 1) not in coordCheckList and x not in (4, 8, 12, 16):
-              #upRight check
-              if (x - 3) not in coordCheckList and x not in (1,2,3,4,8,12,16):
-               #Up Check
-               if (x - 4) not in coordCheckList and x > 4:
-                #upLeft Check
-                if (x - 5) not in coordCheckList and x not in (1, 2, 3, 4, 5, 9, 13):
-                 #Left Check
-                 if (x - 1) not in coordCheckList and x not in (1, 5, 9, 13):
-                  #downLeft Check
-                  if (x + 3) not in coordCheckList and x not in (1, 5, 9, 13, 14, 15, 16):
-                    #Down Check
-                   if (x + 4) not in coordCheckList and x not in (13, 14, 15, 16):
-                    #downRight Check
-                    if (x + 5) not in coordCheckList and x  not in (4, 8, 12, 13, 14, 15, 16):
-                     checkCondition == False
+        #for i, current in enumerate (coordCheckList):
+        x = int(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
+        #Self check
+        if conDuplicate == False:
+         #right check
+         if (x + 1) not in coordCheckList or x in (4, 8, 12, 16):
+          #upRight check
+          if (x - 3) not in coordCheckList or x in (1,2,3,4,8,12,16):
+           #Up Check
+           if (x - 4) not in coordCheckList or x <= 4:
+            #upLeft Check
+            if (x - 5) not in coordCheckList or x in (1, 2, 3, 4, 5, 9, 13):
+             #Left Check
+             if (x - 1) not in coordCheckList or x in (1, 5, 9, 13):
+              #downLeft Check
+              if (x + 3) not in coordCheckList or x in (1, 5, 9, 13, 14, 15, 16):
+                #Down Check
+               if (x + 4) not in coordCheckList or x in (13, 14, 15, 16):
+                #downRight Check
+                if (x + 5) not in coordCheckList or x in (4, 8, 12, 13, 14, 15, 16):
+                 checkCondition = False
 
-            else:
-                break
-            print('Check Condition 2 =', checkCondition)
+                else: print("Con9")
+               else: print("Con8")
+              else: print("Con7")
+             else: print("Con6")
+            else: print("Con5")
+           else: print("Con4")
+          else: print("Con3")
+         else: print("Con2")
+        else: print("Con1")
+            
         if checkCondition == False:
             print(f"This line is broken because conQuestion check #{loopNum - 1} isn't next to any points you've "
                   f"checked in the past")
