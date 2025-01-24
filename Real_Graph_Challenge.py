@@ -22,20 +22,26 @@ while True:
     lineList = [topBoarder, line1, line2, line3, line4, bottomBoarder]
     coordCheckList = []
     isConnected = True
-    backEndConnected = False
-    #possibly Junk Code Above
     [prevDupicate, conDuplicate] = [False, False]
 
     def display_graph():
         stringPrintList = ""
-        for current in range(6):
-            for cCurrent in range(6):
-                if lineList[int(current) - 1][int(cCurrent) - 1] != "":
-                    stringPrintList += (str(lineList[int(current) - 1][int(cCurrent) - 1])) + "  "
+        for currentRow in range(6):
+            for currentColumn in range(6):
+                if lineList[int(currentRow) - 1][int(currentColumn) - 1] != "":
+                    stringPrintList += (str(lineList[int(currentRow) - 1][int(currentColumn) - 1])) + "  "
             stringPrintList += "\n"
         print(stringPrintList)
 
-    display_graph()
+    print("\n"
+        f"(1,1) is here\n"
+          f"  ↓\n"
+          f"  0  0  0  0\n"
+          f"  0  0  0  0\n"
+          f"  0  0  0  0\n"
+          f"  0  0  0  0\n"
+          f"           ↑\n"
+          f"         (4,4) is here\n\n")
 
     print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
     while True:
@@ -56,7 +62,7 @@ while True:
 
 
 
-        if int(selection[0] or selection[1]) > 4 or int(selection[0] or selection[1]) < 1:
+        if int(selection[0]) > 4 or int(selection[1]) > 4 or int(selection[0]) < 1 or int(selection[1]) < 1:
             print("Numbers are out of range")
             continue
         #enter the solution here
@@ -201,7 +207,7 @@ while True:
             print(f"This line is broken because conQuestion check #{loopNum - 1} isn't next to any points you've "
                   f"checked in the past")
             isConnected = False
-        else: print("Back End ConQuestion Check Passed!")
+        else: print("conCheck Passed!")
         conDuplicate = False
         checkCondition = True
 
