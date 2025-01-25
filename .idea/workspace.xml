@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" beforeDir="false" afterPath="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Real_Graph_Challenge.py" afterDir="false" />
-    </list>
+    <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
