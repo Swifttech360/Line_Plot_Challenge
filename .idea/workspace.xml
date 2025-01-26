@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)" />
+    <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,6 +40,7 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/factorial assignment.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/RealGraphChallenge_Backup01.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/Real_Graph_Challenge.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/appendTest.py" root0="SKIP_INSPECTION" />
@@ -51,28 +54,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.All_Purpose_Playground.executor&quot;: &quot;Run&quot;,
-    &quot;Python.RealGraphChallenge_Backup01.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Real_Graph_Challenge.executor&quot;: &quot;Run&quot;,
-    &quot;Python.appendTest.executor&quot;: &quot;Run&quot;,
-    &quot;Python.myinfo.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/(A) IVY TECH WORK/SDEV140/MilesButlerM#_M#Ex#&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.All_Purpose_Playground.executor": "Run",
+    "Python.RealGraphChallenge_Backup01.executor": "Run",
+    "Python.Real_Graph_Challenge.executor": "Run",
+    "Python.appendTest.executor": "Run",
+    "Python.color mixing assignment (1).executor": "Run",
+    "Python.color mixing assignment.executor": "Run",
+    "Python.factorial assignment.executor": "Debug",
+    "Python.myinfo.executor": "Run",
+    "Python.scratch.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/color mixing assignment.py",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
-      &quot;Python&quot;
+  "keyToStringList": {
+    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
+      "Python"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Python.Real_Graph_Challenge">
+}]]></component>
+  <component name="RunManager" selected="Python.color mixing assignment (1)">
     <configuration name="All_Purpose_Playground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
@@ -87,28 +93,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../All_Purpose_Playground.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="RealGraphChallenge_Backup01" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Git_GraphChallenge" />
-      <option name="ENV_FILES" value="" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -139,7 +123,29 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="myinfo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="color mixing assignment (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Git_GraphChallenge" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/color mixing assignment.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="color mixing assignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -152,7 +158,7 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/myinfo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/color mixing assignment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -161,7 +167,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="factorial assignment" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,11 +176,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../../(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/factorial assignment.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -185,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Real_Graph_Challenge" />
-        <item itemvalue="Python.RealGraphChallenge_Backup01" />
+        <item itemvalue="Python.color mixing assignment (1)" />
+        <item itemvalue="Python.factorial assignment" />
         <item itemvalue="Python.All_Purpose_Playground" />
-        <item itemvalue="Python.myinfo" />
-        <item itemvalue="Python.scratch" />
+        <item itemvalue="Python.color mixing assignment" />
+        <item itemvalue="Python.Real_Graph_Challenge" />
       </list>
     </recent_temporary>
   </component>
