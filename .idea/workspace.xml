@@ -5,7 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Added docstrings for functions and program overview">
+      <change afterPath="$PROJECT_DIR$/readme.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RealGraphChallenge_Backup01.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/appendTest.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,31 +58,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python.All_Purpose_Playground.executor": "Run",
-    "Python.RealGraphChallenge_Backup01.executor": "Run",
-    "Python.Real_Graph_Challenge.executor": "Run",
-    "Python.appendTest.executor": "Run",
-    "Python.color mixing assignment (1).executor": "Run",
-    "Python.color mixing assignment.executor": "Run",
-    "Python.factorial assignment.executor": "Debug",
-    "Python.myinfo.executor": "Run",
-    "Python.scratch.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "ShowUsagesActions.previewPropertyKey": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/color mixing assignment.py",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.All_Purpose_Playground.executor&quot;: &quot;Run&quot;,
+    &quot;Python.RealGraphChallenge_Backup01.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Real_Graph_Challenge.executor&quot;: &quot;Run&quot;,
+    &quot;Python.appendTest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.color mixing assignment (1).executor&quot;: &quot;Run&quot;,
+    &quot;Python.color mixing assignment.executor&quot;: &quot;Run&quot;,
+    &quot;Python.factorial assignment.executor&quot;: &quot;Debug&quot;,
+    &quot;Python.myinfo.executor&quot;: &quot;Run&quot;,
+    &quot;Python.scratch.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;ShowUsagesActions.previewPropertyKey&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/color mixing assignment.py&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File": [
-      "Python"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/New Scratch File&quot;: [
+      &quot;Python&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.Real_Graph_Challenge">
     <configuration name="All_Purpose_Playground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />

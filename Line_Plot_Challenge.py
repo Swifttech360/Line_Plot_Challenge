@@ -1,11 +1,10 @@
 """
 Program: Line Plot Challenge
-
 AUTHOR: Miles Butler
-
+Date: 1/26/2025
 Overview:
 This program has two stages. First, the program allows the user to plot points on a 4x4 graph by typing two numbers
-(1-4) seperated by a space. These points can also be removed by entering the same coordinate again. The user can then
+(1-4) separated by a space. These points can also be removed by entering the same coordinate again. The user can then
 enter "next" or "break" to begin the second stage of the program.
 
 In the second stage of the program, the user can begin entering points to check if they form a line of connected
@@ -17,9 +16,7 @@ connected.
 def display_graph():
     """
     This function uses nested for-loops to display the graphs
-    current state without showing the list brackets
-    
-    
+    current state without showing the list brackets.
     """
     stringPrintList = ""
     for currentRow in range(6):
@@ -78,7 +75,7 @@ def Input_History_Test():
 #     else: print("prevCon2")
 #    else: print("prevCon1")
 #uncomment comments above to be able to see which flag got triggered each run
-    if checkCondition == False:
+    if not checkCondition:
         print(f"This line is broken because line check #{loopNum - 2} isn't next to any points you've "
               f"checked in the past")
         isConnected = False
@@ -106,7 +103,7 @@ def Input_History_Test():
             #downRight Check
             if (x + 5) not in coordCheckList or x in (4, 8, 12, 13, 14, 15, 16):
              checkCondition = False
-	
+    
 #	        else: print("Con9")
 #	       else: print("Con8")
 #	      else: print("Con7")
@@ -118,10 +115,10 @@ def Input_History_Test():
 #	else: print("Con1")
 #uncomment comments above to be able to see which flag got triggered each run
 
-    if checkCondition == False:
-	    print(f"This line is broken because line check #{loopNum - 1} isn't next to any points you've "
-	          f"checked in the past")
-	    isConnected = False
+    if not checkCondition:
+        print(f"This line is broken because line check #{loopNum - 1} isn't next to any points you've "
+              f"checked in the past")
+        isConnected = False
     #else: print("conCheck Passed!")
     conDuplicate = False
     checkCondition = True
@@ -145,7 +142,7 @@ def Equal_Value_Checks():
     global conQuestion
     global isConnected
 #____________________________________________PREV_CON_QUESTION EQUAL VALUE_CHECKS______________________________________#
-    if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != (lineList[int(prevConQuestion[1]) + 1][int(\
+    if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != (lineList[int(prevConQuestion[1]) + 1][int(
            prevConQuestion[0]) + 1]):
             #right Check
           if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])][\
@@ -169,13 +166,13 @@ def Equal_Value_Checks():
                       if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(prevConQuestion[1])\
                          + 1][int(prevConQuestion[0])]:
                           #self check
-                        if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(conQuestion[1]\
+                        if lineList[int(prevConQuestion[1])][int(prevConQuestion[0])] != lineList[int(conQuestion[1]
                            )][int(conQuestion[0])]:
                          isConnected = False
                          print("This line is broken because no points of the same value touch this point")
 #_____________________________________________CON_QUESTION EQUAL VALUE CHECKS__________________________________________#
     #downRight check
-    if lineList[int(conQuestion[1])][int(conQuestion[0])] != (lineList[int(conQuestion[1]) + 1][int(\
+    if lineList[int(conQuestion[1])][int(conQuestion[0])] != (lineList[int(conQuestion[1]) + 1][int(
        conQuestion[0]) + 1]):
         #right Check
       if lineList[int(conQuestion[1])][int(conQuestion[0])] != lineList[int(conQuestion[1])][\
@@ -253,23 +250,29 @@ while True:
           f"           ↑\n"
           f"         (4,4) is here\n\n")
 
-    print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")')
+    print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")\n'
+          'Type "next" to continue to the programs next stage\n')
     while True:
         insQ = input("Where would you like to insert marks?:\n")
         
-        if insQ in ("break", "next", ""):
+        if insQ in ("break", "next"):
             break
         selection = insQ.split()
+        if len(insQ) != 2:
+            print('Invalid input\n'
+                  'Be sure to enter two numbers separated by a singular space.\n')
+            continue
         try:
             checker = int(selection[0]) + int(selection[1])
         except Exception:
-            print("Those aren't two integers, dummy")
+            print('Invalid input.\n'
+                  'Make sure all inputs are two integers.\n')
             continue
 
 
 
         if int(selection[0]) > 4 or int(selection[1]) > 4 or int(selection[0]) < 1 or int(selection[1]) < 1:
-            print("Numbers are out of range")
+            print("Numbers are out of range.")
             continue
         #enter the solution here
         if lineList[int(selection[1])][int(selection[0])] == 0:
@@ -283,30 +286,33 @@ while True:
 
 
     loopNum = 1
+    print('\nYou can now check points to see if they form a connected line of equal valules, or a line that is '
+          'broken.\nEnter two coordinates (one at a time) to begin checking points.\nWhen finished, '
+          'type "next" to confirm your checked points and continue.\n')
 
     while loopNum < 2:
 
-        StrPrevConQuestion = input(f"enter point #{loopNum}: ")
+        StrPrevConQuestion = input(f"Enter point #{loopNum}: ")
         if StrPrevConQuestion in ("break", "next"):
-            print("please enter at least two points first")
+            print("Please enter at least two points first.")
             continue
         
         prevConQuestion = StrPrevConQuestion.split()
         if len(prevConQuestion) != 2:
             print('Invalid input\n'
-                  'Be sure to enter two numbers seperated by a spece\n')
+                  'Be sure to enter two numbers separated by a singular space.\n')
             continue
         try:
             checker = int(prevConQuestion[0]) + int(prevConQuestion[1])
         except ValueError:
-            print("Invalid input, please try again")
+            print("Inputs must be two integers separated by a space.\nPlease try again.")
             StrPrevConQuestion = ""
             prevConQuestion = ''
             continue
         if int(prevConQuestion[0]) < 1 or int(prevConQuestion[0]) > 4\
              or int(prevConQuestion[1]) < 1 or int(prevConQuestion[1]) > 4:
-            print("One or more numbers are out of range\n"
-                  "please make sure all numbers are within range 1-4")
+            print("One or more numbers are out of range.\n"
+                  "Make sure all numbers are within range 1-4.")
             continue
         loopNum += 1
         if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] not in coordCheckList:
@@ -320,22 +326,22 @@ while True:
 
     while True:
 
-        StrConQuestion = input(f"enter point #{loopNum}: ")
+        StrConQuestion = input(f"Enter point #{loopNum}: ")
         if StrConQuestion in ("break", "next"):
             break
         conQuestion = StrConQuestion.split()
         if len(conQuestion) != 2:
-            print('Invalid input\n'
-                  'Be sure to enter two numbers seperated by a spece\n')
+            print('Invalid input.\n'
+                  'Be sure to enter TWO numbers separated by a singular space.\n')
             continue
         try:
             checker = int(conQuestion[0]) + int(conQuestion[1])
         except ValueError:
-            print("Invalid input, please try again")
+            print("Inputs must be two integers separated by a space.\nPlease try again.")
             continue
         if int(conQuestion[0]) < 1 or int(conQuestion[0]) > 4 or int(conQuestion[1]) < 1 or int(conQuestion[1]) > 4:
-            print("One or more numbers are out of range\n"
-                  "please make sure all numbers are within range 1-4")
+            print("One or more numbers are out of range.\n"
+                  "Make sure all numbers are within range 1-4.")
             continue
         loopNum += 1
 
@@ -360,16 +366,16 @@ while True:
 
 
         if isConnected:
-            print("\nChecked points form a line so far")
-        else: print("Points no longer connected")
+            print("\nChecked points form a line so far.")
+        else: print("Checked points are no longer connected.")
 
-        StrPrevConQuestion = input(f"enter point #{loopNum}")
+        StrPrevConQuestion = input(f"Enter point #{loopNum}")
         if StrPrevConQuestion in ("break", "next"):
             break
         prevConQuestion = StrPrevConQuestion.split()
         if len(prevConQuestion) != 2:
-            print('Invalid input\n'
-                  'Be sure to enter two numbers seperated by a spece\n')
+            print('Invalid input.\n'
+                  'Be sure to enter two numbers separated by a singular space.\n')
             continue
         try:
             checker = int(prevConQuestion[0]) + int(prevConQuestion[1])
@@ -379,8 +385,8 @@ while True:
             continue
         if int(prevConQuestion[0]) < 1 or int(prevConQuestion[0]) > 4\
              or int(prevConQuestion[1]) < 1 or int(prevConQuestion[1]) > 4:
-            print("One or more numbers are out of range\n"
-                  "please make sure all numbers are within range 1-4")
+            print("One or more numbers are out of range.\n"
+                  "Make sure all numbers are within range 1-4.")
             continue
         loopNum += 1
         if backEndLineList[int(prevConQuestion[1])][int(prevConQuestion[0])] not in coordCheckList:
@@ -391,8 +397,8 @@ while True:
         Input_History_Test()
         
         if isConnected:
-            print("\nChecked points form a line so far")
-        else: print("Points no longer connected")
+            print("\nChecked points form a line so far.")
+        else: print("Checked points no longer connected.")
        
         display_graph()
         checkHistoryList.append(StrPrevConQuestion)
@@ -400,15 +406,15 @@ while True:
         
 
     if isConnected:
-        print("All checked points connected")
+        print("All checked points are connected!")
     else:
-        print("Checked points do not form a line of equal value")
+        print("Checked coordinates do not form a connected line of equally valued points.")
     again = input("again? y/n").upper()
     if again == "N":
         break
     
 
-#test graph:
+#old test graph for bug fixes:
 #topBoarder = ["", "", "", "", "", ""]
 #line1 = ["", 91, 92, 93, 94, ""]
 #line2 = ["", 95, 96, 97, 98, ""]
@@ -418,17 +424,3 @@ while True:
 
 
 
-#downRight check
-#jhvouhf[hwfhiweh[wh[whf[ifghjkl;
-
-
-
-
-#topBoarder = ["", "", "", "", "", ""]
-#line1 = ["", 1, 2, 3, 4, ""]
-#line2 = ["", 5, 6, 7, 8, ""]
-#line3 = ["", 9, 10, 11, 12, ""]
-#line4 = ["", 13, 14, 15, 16, ""]
-#bottomBoarder = ["", "", "", "", "", ""]
-
-    #IDLE Test
