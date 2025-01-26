@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fe535f9e-d614-438f-9d17-1e328cefa312" name="Changes" comment="Found a successful method to check if all inputs are connected through back end line list&#10;&#10;I'm now using a series of formulas to simply take the back end line list number for the current 'prevConQuestion&quot; integer, and simply add or subtract a number to/from it before checking if that new number is in the coordCheckList (while excluding numbers unfit for each test, of course)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Real_Graph_Challenge.py" beforeDir="false" afterPath="$PROJECT_DIR$/Real_Graph_Challenge.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
     "Python.scratch.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
+    "ShowUsagesActions.previewPropertyKey": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "E:/(A) IVY TECH WORK/SDEV140/Python Work/Module 02 Programming Assignment/color mixing assignment.py",
@@ -78,7 +80,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager" selected="Python.color mixing assignment (1)">
+  <component name="RunManager" selected="Python.Real_Graph_Challenge">
     <configuration name="All_Purpose_Playground" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Git_GraphChallenge" />
       <option name="ENV_FILES" value="" />
@@ -191,11 +193,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Real_Graph_Challenge" />
         <item itemvalue="Python.color mixing assignment (1)" />
         <item itemvalue="Python.factorial assignment" />
         <item itemvalue="Python.All_Purpose_Playground" />
         <item itemvalue="Python.color mixing assignment" />
-        <item itemvalue="Python.Real_Graph_Challenge" />
       </list>
     </recent_temporary>
   </component>
@@ -303,7 +305,13 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="CUSTOM_BOOLEAN_PROPERTIES">
+                <map>
+                  <entry key="Show.Git.Branches" value="false" />
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>

@@ -1,4 +1,26 @@
+"""
+Program: Line Plot Challenge
+
+AUTHOR: Miles Butler
+
+Overview:
+This program has two stages. First, the program allows the user to plot points on a 4x4 graph by typing two numbers
+(1-4) seperated by a space. These points can also be removed by entering the same coordinate again. The user can then
+enter "next" or "break" to begin the second stage of the program.
+
+In the second stage of the program, the user can begin entering points to check if they form a line of connected
+points of the same value (1 or 0) based on the graph they made previously. Uppon entering a point that breaks this
+line of points, the program will notify the user, and explain exactly why the line of checked points are no longer
+connected.
+"""
+
 def display_graph():
+    """
+    This function uses nested for-loops to display the graphs
+    current state without showing the list brackets
+    
+    
+    """
     stringPrintList = ""
     for currentRow in range(6):
         for currentColumn in range(6):
@@ -9,6 +31,16 @@ def display_graph():
     
 
 def Input_History_Test():
+    """
+    Reviews a list of all previous points to make sure every point the user checks
+    touches another point they've entered previously.
+    
+    Arguments: None
+    
+    Return: If none of the functions flags in any of the two if chains are triggered, the function returns a message
+    saying the line has been broken because point #(x) wasn't next to any previous inputs. This would also switch
+    "isConnected" variable to False.
+    """
     global isConnected
     global checkCondition
     global prevDupicate
@@ -95,6 +127,19 @@ def Input_History_Test():
     checkCondition = True
 
 def Equal_Value_Checks():
+    """
+    Function Overview:
+    
+    Checks to make sure that all checked points are the same value on the graph, and that there are points of the
+    value that touch every checked point
+    
+    Arguments: None
+    
+    Return:
+        Displays a unique message for if no points of equal value touches one of the checked points, or if the user
+        checks a point of a different value than a previous one. Both scenarios also switch "isConnected" to False
+    
+    """
     global lineList
     global prevConQuestion
     global conQuestion
@@ -269,6 +314,7 @@ while True:
         else:
             prevDupicate = True
         lineValue = lineList[int(prevConQuestion[1])][int(prevConQuestion[0])]
+        checkHistoryList.append(StrPrevConQuestion)
             #print('prevDupicate = True')
             #print(coordCheckList)
 
@@ -281,6 +327,7 @@ while True:
         if len(conQuestion) != 2:
             print('Invalid input\n'
                   'Be sure to enter two numbers seperated by a spece\n')
+            continue
         try:
             checker = int(conQuestion[0]) + int(conQuestion[1])
         except ValueError:
@@ -296,9 +343,9 @@ while True:
             coordCheckList.append(backEndLineList[int(conQuestion[1])][int(conQuestion[0])])
         else:
             conDupicate = True
-            
+        checkHistoryList.append(StrConQuestion)
         display_graph()
-        
+        print(f"Checked Points: {checkHistoryList}")
         #print(coordCheckList)
 
         lineCheck1 = False
@@ -313,7 +360,7 @@ while True:
 
 
         if isConnected:
-            print("True so far")
+            print("\nChecked points form a line so far")
         else: print("Points no longer connected")
 
         StrPrevConQuestion = input(f"enter point #{loopNum}")
@@ -323,6 +370,7 @@ while True:
         if len(prevConQuestion) != 2:
             print('Invalid input\n'
                   'Be sure to enter two numbers seperated by a spece\n')
+            continue
         try:
             checker = int(prevConQuestion[0]) + int(prevConQuestion[1])
         except ValueError:
@@ -343,13 +391,18 @@ while True:
         Input_History_Test()
         
         if isConnected:
-            print("True so far")
+            print("\nChecked points form a line so far")
         else: print("Points no longer connected")
+       
+        display_graph()
+        checkHistoryList.append(StrPrevConQuestion)
+        print(f"Checked Points: {checkHistoryList}")
+        
 
     if isConnected:
         print("All checked points connected")
     else:
-        print("Checked points not connected")
+        print("Checked points do not form a line of equal value")
     again = input("again? y/n").upper()
     if again == "N":
         break
