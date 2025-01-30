@@ -258,9 +258,9 @@ while True:
         if insQ in ("break", "next"):
             break
         selection = insQ.split()
-        if len(insQ) != 2:
+        if len(selection) != 2:
             print('Invalid input\n'
-                  'Be sure to enter two numbers separated by a singular space.\n')
+                  'Be sure to enter no more or less than two numbers, separated by a singular space.\n')
             continue
         try:
             checker = int(selection[0]) + int(selection[1])
