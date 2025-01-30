@@ -366,8 +366,8 @@ while True:
 
 
         if isConnected:
-            print("\nChecked points form a line so far.")
-        else: print("Checked points are no longer connected.")
+            print("Checked points form a line so far.\n")
+        else: print("Checked points are no longer connected.\n")
 
         StrPrevConQuestion = input(f"Enter point #{loopNum}")
         if StrPrevConQuestion in ("break", "next"):
