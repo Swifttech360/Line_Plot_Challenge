@@ -250,29 +250,31 @@ while True:
           f"           ↑\n"
           f"         (4,4) is here\n\n")
 
-    print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y")\n'
-          'Type "next" to continue to the programs next stage\n')
+    print('Enter two numbers (1 - 4) separated by a space to add a point to the graph (i.e,"x y").\n'
+          'Type "next" to continue to the programs next stage.\n\n'
+          "For a more detailed tutorial, please review this repository's readme.txt file.\n")
     while True:
-        insQ = input("Where would you like to insert marks?:\n")
+        insQ = input("Where would you like to insert points?: \n")
         
         if insQ in ("break", "next"):
             break
         selection = insQ.split()
         if len(selection) != 2:
             print('Invalid input\n'
-                  'Be sure to enter no more or less than two numbers, separated by a singular space.\n')
+                  'Be sure to enter exactly two numbers, separated by a singular space.\n')
             continue
         try:
             checker = int(selection[0]) + int(selection[1])
         except Exception:
             print('Invalid input.\n'
-                  'Make sure all inputs are two integers.\n')
+                  'Make sure all inputs are two integers (no decimals, letters, or symbols), seperated by a '
+                  'single space.\n')
             continue
 
 
 
         if int(selection[0]) > 4 or int(selection[1]) > 4 or int(selection[0]) < 1 or int(selection[1]) < 1:
-            print("Numbers are out of range.")
+            print("Invalid input.\nAll integers must greater than 0 and less than 5.\n")
             continue
         #enter the solution here
         if lineList[int(selection[1])][int(selection[0])] == 0:
@@ -288,7 +290,8 @@ while True:
     loopNum = 1
     print('\nYou can now check points to see if they form a connected line of equal valules, or a line that is '
           'broken.\nEnter two coordinates (one at a time) to begin checking points.\nWhen finished, '
-          'type "next" to confirm your checked points and continue.\n')
+          'type "next" to confirm your checked points and continue.\nFor a more detailed tutorial, please review this'
+          "repository's readme.txt file.")
 
     while loopNum < 2:
 
@@ -366,7 +369,7 @@ while True:
 
 
         if isConnected:
-            print("Checked points form a line so far.\n")
+            print("All checked points form an unbroken line so far.\n")
         else: print("Checked points are no longer connected.\n")
 
         StrPrevConQuestion = input(f"Enter point #{loopNum}")
@@ -397,7 +400,7 @@ while True:
         Input_History_Test()
         
         if isConnected:
-            print("\nChecked points form a line so far.")
+            print("\nAll checked points form an unbroken line so far.")
         else: print("Checked points no longer connected.")
        
         display_graph()
