@@ -2,9 +2,9 @@ Program: Line Plot Challenge
 AUTHOR: Miles Butler
 Date: 1/26/2025
 
-##Overview/Instructions:
+Overview/Instructions:
 This repository acts as a demonstration of my ability to utilize Python and GitHub to develop programs. To start the
-program, open the 'Line_Plot_Challenge.py' file in any python IDE (I.E., IDLE, PyCharm, Visual Studio, etc.)
+program, open the 'Line_Plot_Challenge.py' file in any Python IDE (I.E., IDLE, PyCharm, Visual Studio, etc.)
 before hitting the run button.
 
 This program has two stages. First, the program allows the user to plot points on a 4x4 graph by typing two integers
@@ -20,6 +20,6 @@ user that their checked points no longer form a connected line of equal points (
 The same thing will happen if any check input (excluding the first one) checks a point that isn't next to any
 previously checked points. Otherwise, the program will print "All checked points form an unbroken line so far."
 At any time after the first check, the user can once again enter "next" or "break" to see if their list of checked
-points form a connected line of points or not. The user will then be asked if they want to run the program again via a
+points form a connected line of points or not. The user will then be asked if they want to rerun the program via a
 y/n input question.
 
